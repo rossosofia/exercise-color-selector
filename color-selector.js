@@ -5,7 +5,8 @@ window.addEventListener("DOMContentLoaded" , start);
 function start(){
     console.log("START");
     addEventListeners();
-    colorUpdate(input.value);
+    // THIIIIS DOESN't make SENSEEEE
+    colorUpdate(input.value, input.value, rgb, hsl);
   }
 
 function addEventListeners(){
@@ -22,7 +23,7 @@ function colorConvert(){
     // console.log(` RGB: , ${rgb.r}, ${rgb.g} , ${rgb.b}`);
     // console.log(`HSL: , ${hsl.h} , ${hsl.s}% , ${hsl.l}%`);
     //change element colours
-    colorUpdate(this.value, this.value, rgb, hsl)
+    colorUpdate(this.value, this.value, rgb, hsl);
 }
 
 function colorUpdate(css, hex, rgb, hsl){
@@ -30,7 +31,7 @@ function colorUpdate(css, hex, rgb, hsl){
   document.querySelector("div").style.backgroundColor = css;
   document.getElementById("hex").textContent = hex;
   document.getElementById("rgb").textContent = `RGB  | ${rgb.r} - ${rgb.g} - ${rgb.b}`;
-  document.getElementById("hsl").textContent = `HSL | ${hsl.h} - ${hsl.s}% - ${hsl.l}%`;
+  document.getElementById("hsl").textContent = `HSL | ${hsl.h}% - ${hsl.s}% - ${hsl.l}%`;
 }
 
 
