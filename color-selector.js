@@ -35,7 +35,6 @@ function colorUpdate(css, hex, rgb, hsl){
 }
 
 
-
 function hexToRGB(hexColor){
   // The parseInt() function parses a string argument and returns an integer of the specified radix. parseInt(string, radix). With substring we are collecting the 2 numbers at time from the HEX string and using them for the calculation
   const r = parseInt(hexColor.substring(1,3),16);
